@@ -1,0 +1,21 @@
+{
+  "name": "rltube-backend",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.4",
+    "fastify": "^0.29.2",
+    "fastify-helmet": "^1.0.1",
+    "minimist": "^1.2.0",
+    "mongoose": "^4.12.1",
+    "request": "^2.83.0",
+    "tap": "^10.7.2"
+  }
+}
