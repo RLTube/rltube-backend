@@ -1,12 +1,12 @@
 'use strict'
 
 const minimist = require('minimist'),
-      server = require('./api/server/server'),
-      port = minimist(process.argv.slice(2), {
-        integer: ['port'],
-        alias: { port: 'p' },
-        default: { port: 8080 }
-      })
+  server = require('./api/server/server'),
+  port = minimist(process.argv.slice(2), {
+    integer: ['port'],
+    alias: { port: 'p' },
+    default: { port: 8080 }
+  })
 
 server.get('/', async (req, reply) => {
   req.log.info('request on root')
@@ -15,7 +15,7 @@ server.get('/', async (req, reply) => {
   })
 })
 
-function start(opts, callback) {
+function start (opts, callback) {
   server.listen(opts.port, function (err) {
     callback(err, server)
   })
@@ -37,11 +37,10 @@ server.addHook('onClose', (instance, done) => {
   done()
 })
 
-
-/*server.listen(port, (err) => {
+/* server.listen(port, (err) => {
   if (err) throw err;
   console.log(`server listening on ${server.server.address().port}`)
-})*/
+}) */
 
 module.exports = {
   start: start,

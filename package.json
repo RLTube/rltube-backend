@@ -4,8 +4,21 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "ava",
     "start": "node index.js"
+  },
+  "ava": {
+	  "files": [
+		 "tests/*.js"
+	  ],
+	  "source": [
+		"api/**/*.js"
+	  ],
+	  "concurency": 4,
+	  "failFast": true,
+	  "failWithoutAssertions": false,
+	  "tap": true,
+	  "powerAsset": false
   },
   "author": "",
   "license": "MIT",
@@ -17,5 +30,9 @@
     "mongoose": "^4.12.1",
     "request": "^2.83.0",
     "tap": "^10.7.2"
+  },
+  "devDependencies": {
+    "ava": "^0.22.0",
+    "standard": "^10.0.3"
   }
 }

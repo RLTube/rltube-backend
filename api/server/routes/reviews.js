@@ -1,8 +1,8 @@
 'use strict'
 
 const database = require('../../database/database'),
-      db = database.db,
-      Review = database.models.Review
+  db = database.db,
+  Review = database.models.Review
 
 module.exports = (fastify, opts, next) => {
   // Get all reviews
@@ -12,7 +12,7 @@ module.exports = (fastify, opts, next) => {
 
       reviews.forEach((review) => {
         if (!reviewMap[review.videoId]) reviewMap[review.videoId] = []
-         reviewMap[review.videoId].push(review)
+        reviewMap[review.videoId].push(review)
       })
 
       reply.send(reviewMap)

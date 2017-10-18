@@ -1,7 +1,7 @@
 'use strict'
 
 const mongoose = require('mongoose'),
-      Schema = mongoose.Schema
+  Schema = mongoose.Schema
 
 const ReviewSchema = new Schema({
   videoId: {
@@ -11,7 +11,7 @@ const ReviewSchema = new Schema({
   type: {
     type: String,
     required: true,
-    enum: ["POSITIVE", "NEGATIVE", "CONTROVERSIAL"]
+    enum: ['POSITIVE', 'NEGATIVE', 'CONTROVERSIAL']
   },
   reviewedMediaUrl: {
     type: String,
@@ -27,7 +27,7 @@ const ReviewSchema = new Schema({
   },
   description: {
     type: String,
-    default: ""
+    default: ''
   }
 })
 
