@@ -1,6 +1,7 @@
 # rltube-backend
 Backend for RLTube
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/a54d1b408f3046aa815dc1b72e0633c9)](https://www.codacy.com/app/kranack/rltube-backend?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=RLTube/rltube-backend&amp;utm_campaign=Badge_Grade)
 
 ## What is it ?
 
