@@ -17,6 +17,39 @@ consumes:
 produces:
   - application/json
 paths:
+  /{video_id}:
+    # binds a127 app logic to a route
+    x-swagger-router-controller: reviews
+    get:
+      description: Returns the list of reviews for the video
+      responses:
+        "200":
+          description: Success
+          schema:
+            # a pointer to a definition
+            $ref: "#/definitions/HelloWorldResponse"
+        # responses may fall through to errors
+        default:
+          description: Error
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+    post:
+      description: Add a review to this video
+      parameters:
+        - name: review
+          in: query
+          description: The name of the person to whom to say hello
+          required: true
+          type: string
+      responses:
+        "200":
+          description: Success
+          
+        default:
+          description: Error
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+
   /reviews:
     # binds a127 app logic to a route
     x-swagger-router-controller: reviews

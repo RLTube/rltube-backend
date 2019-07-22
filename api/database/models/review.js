@@ -1,33 +1,29 @@
 'use strict'
 
-const mongoose = require('mongoose'),
-  Schema = mongoose.Schema
+const mongoose = require('mongoose')
+
+const Schema = mongoose.Schema
 
 const ReviewSchema = new Schema({
   videoId: {
     type: String,
     required: true
   },
-  type: {
-    type: String,
-    required: true,
-    enum: ['POSITIVE', 'NEGATIVE', 'CONTROVERSIAL']
-  },
-  reviewedMediaUrl: {
+  link: {
     type: String,
     required: true
   },
-  referenceUrl: {
-    type: String,
-    required: true
-  },
-  reviewedTimes: {
-    type: Number,
-    default: 0
-  },
-  description: {
+  title: {
     type: String,
     default: ''
+  },
+  text: {
+    type: String,
+    required: true
+  },
+  vote: {
+    type: Number,
+    default: 0
   }
 })
 

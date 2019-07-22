@@ -1,7 +1,5 @@
 'use strict'
 
-const enumReviewType = ['POSITIVE', 'CONTROVERSIAL', 'NEGATIVE']
-
 const addSchema = {
   body: {
     type: 'object',
@@ -10,13 +8,12 @@ const addSchema = {
         type: 'object',
         properties: {
           videoId: { type: 'string' },
-          type: { type: 'string', enum: enumReviewType },
-          reviewedMediaUrl: { type: 'string' },
-          referenceUrl: { type: 'string' },
-          description: { type: 'string' },
-          reviewedTimes: { type: 'number' }
+          link: { type: 'string' },
+          title: { type: 'string' },
+          text: { type: 'string' },
+          vote: { type: 'number' }
         },
-        required: ['videoId', 'type', 'reviewedMediaUrl', 'referenceUrl']
+        required: ['videoId', 'vote']
       }
     },
     required: ['review']
@@ -40,11 +37,10 @@ const getSchema = {
           type: 'object',
           properties: {
             videoId: { type: 'string' },
-            type: { type: 'string', enum: enumReviewType },
-            reviewedMediaUrl: { type: 'string' },
-            referenceUrl: { type: 'string' },
-            description: { type: 'string' },
-            reviewedTimes: { type: 'number' }
+            link: { type: 'string' },
+            title: { type: 'string' },
+            text: { type: 'string' },
+            vote: { type: 'number' }
           }
         }
       }
@@ -64,11 +60,10 @@ const listSchema = {
             type: 'object',
             properties: {
               videoId: { type: 'string' },
-              type: { type: 'string', enum: enumReviewType },
-              reviewedMediaUrl: { type: 'string' },
-              referenceUrl: { type: 'string' },
-              description: { type: 'string' },
-              reviewedTimes: { type: 'number' }
+              link: { type: 'string' },
+              title: { type: 'string' },
+              text: { type: 'string' },
+              vote: { type: 'number' }
             }
           },
           additionalItems: true,

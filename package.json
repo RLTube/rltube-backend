@@ -1,7 +1,7 @@
 {
   "name": "rltube-backend",
   "version": "0.1.0",
-  "description": "",
+  "title": "",
   "main": "index.js",
   "scripts": {
     "test": "ava",
