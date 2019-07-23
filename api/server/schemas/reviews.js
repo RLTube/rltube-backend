@@ -7,13 +7,13 @@ const addSchema = {
       review: {
         type: 'object',
         properties: {
-          videoId: { type: 'string' },
+          videoUrl: { type: 'string' },
           link: { type: 'string' },
           title: { type: 'string' },
           text: { type: 'string' },
           vote: { type: 'number' }
         },
-        required: ['videoId', 'vote']
+        required: ['videoUrl', 'vote']
       }
     },
     required: ['review']
@@ -36,7 +36,8 @@ const getSchema = {
         '.*': {
           type: 'object',
           properties: {
-            videoId: { type: 'string' },
+            _id: { type: 'string' },
+            videoUrl: { type: 'string' },
             link: { type: 'string' },
             title: { type: 'string' },
             text: { type: 'string' },
@@ -59,7 +60,8 @@ const listSchema = {
           items: {
             type: 'object',
             properties: {
-              videoId: { type: 'string' },
+              _id: { type: 'string' },
+              videoUrl: { type: 'string' },
               link: { type: 'string' },
               title: { type: 'string' },
               text: { type: 'string' },

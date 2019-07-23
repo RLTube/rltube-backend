@@ -5,7 +5,11 @@ const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
 const ReviewSchema = new Schema({
-  videoId: {
+  _id: {
+    type: String,
+    required: true
+  },
+  videoUrl: {
     type: String,
     required: true
   },
