@@ -68,7 +68,6 @@ module.exports = (fastify, opts, next) => {
   fastify.post('/', { schema: opts.schemas.add }, async (req, reply) => {
     let review = new Review(req.body.review)
 	const err = await review.save((err) => { return !!err })
-
 	reply.send({ err })
   })
 
