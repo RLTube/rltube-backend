@@ -10,7 +10,6 @@ const addSchema = {
           videoUrl: { type: 'string' },
           link: { type: 'string' },
           title: { type: 'string' },
-          text: { type: 'string' },
           vote: { type: 'number' }
         },
         required: ['videoUrl', 'vote']
@@ -40,7 +39,6 @@ const getSchema = {
             videoUrl: { type: 'string' },
             link: { type: 'string' },
             title: { type: 'string' },
-            text: { type: 'string' },
             vote: { type: 'number' }
           }
         }
@@ -64,7 +62,6 @@ const listSchema = {
               videoUrl: { type: 'string' },
               link: { type: 'string' },
               title: { type: 'string' },
-              text: { type: 'string' },
               vote: { type: 'number' }
             }
           },

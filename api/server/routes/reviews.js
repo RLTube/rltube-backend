@@ -14,7 +14,7 @@ module.exports = (fastify, opts, next) => {
         if (!reviewMap[review.videoUrl]) reviewMap[review.videoUrl] = []
         reviewMap[review.videoUrl].push(review)
 	  })
-	  
+
 	  return reviewMap
 	})
 
@@ -80,7 +80,7 @@ module.exports = (fastify, opts, next) => {
   })
 
   // Create new review
-  fastify.post('/:videoUrl', { schema: opts.schemas.add }, async (req, reply) => {
+  fastify.post('/', { schema: opts.schemas.add }, async (req, reply) => {
     let review = new Review(req.body.review)
 	const err = await review.save((err) => { return !!err })
 	

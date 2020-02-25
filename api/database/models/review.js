@@ -17,10 +17,6 @@ const ReviewSchema = new Schema({
     type: String,
     default: ''
   },
-  text: {
-    type: String,
-    required: true
-  },
   vote: {
     type: Number,
     default: 0
