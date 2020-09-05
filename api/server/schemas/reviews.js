@@ -12,7 +12,7 @@ const addSchema = {
           reviewedMediaUrl: { type: 'string' },
           referenceUrl: { type: 'string' },
           description: { type: 'string' },
-          reviewedTimes: { type: 'number' }
+          votes: { type: 'number' }
         },
         required: ['videoId', 'type', 'reviewedMediaUrl', 'referenceUrl']
       }
@@ -42,7 +42,7 @@ const getSchema = {
             reviewedMediaUrl: { type: 'string' },
             referenceUrl: { type: 'string' },
             description: { type: 'string' },
-            reviewedTimes: { type: 'number' }
+            votes: { type: 'number' }
           }
         }
       }
@@ -66,7 +66,7 @@ const listSchema = {
               reviewedMediaUrl: { type: 'string' },
               referenceUrl: { type: 'string' },
               description: { type: 'string' },
-              reviewedTimes: { type: 'number' }
+              votes: { type: 'number' }
             }
           },
           additionalItems: true,

@@ -21,7 +21,7 @@ const ReviewSchema = new Schema({
     type: String,
     required: true
   },
-  reviewedTimes: {
+  votes: {
     type: Number,
     default: 0
   },
