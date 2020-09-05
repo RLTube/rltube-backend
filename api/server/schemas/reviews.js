@@ -1,7 +1,5 @@
 'use strict'
 
-const enumReviewType = ['POSITIVE', 'CONTROVERSIAL', 'NEGATIVE']
-
 const addSchema = {
   body: {
     type: 'object',
@@ -10,7 +8,7 @@ const addSchema = {
         type: 'object',
         properties: {
           videoId: { type: 'string' },
-          type: { type: 'string', enum: enumReviewType },
+          type: { type: 'boolean'},
           reviewedMediaUrl: { type: 'string' },
           referenceUrl: { type: 'string' },
           description: { type: 'string' },
@@ -40,7 +38,7 @@ const getSchema = {
           type: 'object',
           properties: {
             videoId: { type: 'string' },
-            type: { type: 'string', enum: enumReviewType },
+            type: { type: 'boolean'},
             reviewedMediaUrl: { type: 'string' },
             referenceUrl: { type: 'string' },
             description: { type: 'string' },
@@ -64,7 +62,7 @@ const listSchema = {
             type: 'object',
             properties: {
               videoId: { type: 'string' },
-              type: { type: 'string', enum: enumReviewType },
+              type: { type: 'boolean'},
               reviewedMediaUrl: { type: 'string' },
               referenceUrl: { type: 'string' },
               description: { type: 'string' },

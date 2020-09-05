@@ -9,9 +9,9 @@ const ReviewSchema = new Schema({
     required: true
   },
   type: {
-    type: String,
+    type: Boolean,
     required: true,
-    enum: ['POSITIVE', 'NEGATIVE', 'CONTROVERSIAL']
+    // enum: ['POSITIVE', 'NEGATIVE', 'CONTROVERSIAL']
   },
   reviewedMediaUrl: {
     type: String,
