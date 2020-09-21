@@ -6,7 +6,7 @@ const log = require('pino')({ level: 'info' }),
   schemas = require('./schemas'),
   routes = require('./routes')
 
-fastify.use(require('cors')())
+fastify.register(require('fastify-cors'))
 fastify.register(helmet)
 
 for (let prefix in routes) { fastify.register(routes[prefix], { prefix: prefix, schemas: schemas[prefix] }) }

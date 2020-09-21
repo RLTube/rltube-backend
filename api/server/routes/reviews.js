@@ -54,7 +54,7 @@ module.exports = (fastify, opts, next) => {
       })
 
       reply.send(reviewMap)
-    })
+	})
   })
 
   // Get a review by reviewId
